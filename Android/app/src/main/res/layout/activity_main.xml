@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.launchpod.myapplication.MainActivity">
+
+    <include
+        android:id="@+id/hospital_summary"
+        layout="@layout/card_weight_summary" />
+
+    <LinearLayout
+        android:id="@+id/button_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hospital_summary"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bt_hospital_barcode"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/teal"
+            android:text="Scan Aadhaar"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="50dp" />
+
+        <Button
+            android:id="@+id/bt_connect"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@color/teal"
+            android:text="Connect Machine"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aadhaar_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_layout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/bt_aadhaar"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:hint="Aadhaar number"
+            android:textColor="#000000" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/internet_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aadhaar_wrapper"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Internet : "
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/internet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Disconnected"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/gps_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/internet_layout"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="GPS : "
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:id="@+id/gps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Off"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/machine_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gps_layout"
+        android:orientation="horizontal"
+        android:paddingLeft="5dp"
+        android:paddingStart="5dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Machine : "
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/machine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Disconnected"
+            android:textColor="#000000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/submit_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/machine_layout"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:paddingTop="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Submit"
+            android:background="@color/teal"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+
+    <!--<Button-->
+        <!--android:layout_alignParentBottom="true"-->
+    <!--android:id="@+id/send"-->
+    <!--android:layout_width="100dp"-->
+    <!--android:layout_height="50dp"-->
+    <!--android:text="Flash"-->
+    <!--android:visibility="visible" />-->
+
+</RelativeLayout>
